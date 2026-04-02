@@ -1,0 +1,27 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color purple_200
+color purple_500
+color purple_700
+color teal_200
+color teal_700
+color white
+string add_new_task
+string add_task
+string app_name
+string cancel
+string delete_task
+string description_optional
+string edit_task
+string enter_description
+string enter_task_title
+string no_tasks_yet
+string save
+string scroll_to_top
+string task_title
+string title_required
+string toggle_completion
+style Theme.TasksApp
+xml backup_rules
+xml data_extraction_rules

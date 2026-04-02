@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!--
+   TODO: Remove the "restrict" attribute to include all shared preferences
+   in the full backup. Note that this will also include the user's login
+   credentials for various accounts (e.g., email, social media).
+   -->
+    <include domain="sharedpref" path="." restrict="true"/>
+    <exclude domain="sharedpref" path="devices.xml"/>
+</full-backup-content>
