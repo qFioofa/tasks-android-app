@@ -1,6 +1,9 @@
 package com.example.tasksapp.ui.components
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.DarkMode
+import androidx.compose.material.icons.filled.LightMode
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
@@ -26,9 +29,9 @@ fun TasksHeader(
             IconButton(onClick = onThemeToggle) {
                 Icon(
                     imageVector = if (isDarkTheme) {
-                        androidx.compose.material.icons.Icons.Default.LightMode
+                        Icons.Default.LightMode
                     } else {
-                        androidx.compose.material.icons.Icons.Default.DarkMode
+                        Icons.Default.DarkMode
                     },
                     contentDescription = if (isDarkTheme) "Switch to light theme" else "Switch to dark theme"
                 )

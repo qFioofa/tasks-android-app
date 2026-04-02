@@ -2,6 +2,7 @@ package com.example.tasksapp
 
 import android.app.Application
 import android.content.Context
+import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -11,16 +12,19 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.unit.dp
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.tasksapp.data.local.TaskDatabase
+import com.example.tasksapp.data.model.Task
 import com.example.tasksapp.data.repository.SettingsRepository
 import com.example.tasksapp.data.repository.TaskRepository
 import com.example.tasksapp.ui.components.*
 import com.example.tasksapp.ui.theme.TasksAppTheme
 import com.example.tasksapp.ui.viewmodel.MainViewModel
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 
@@ -54,7 +58,7 @@ class MainActivity : ComponentActivity() {
             val settingsRepository = application.settingsRepository
 
             val initialDarkTheme = runBlocking {
-                settingsRepository.getTheme().first
+                settingsRepository.getTheme().first()
             }
 
             var isDarkTheme by remember { mutableStateOf(initialDarkTheme) }

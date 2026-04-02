@@ -4,6 +4,8 @@ import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -32,7 +34,7 @@ fun ScrollToTopButton(
             modifier = Modifier.padding(16.dp)
         ) {
             Icon(
-                imageVector = androidx.compose.material.icons.Icons.Default.KeyboardArrowUp,
+                imageVector = Icons.Default.KeyboardArrowUp,
                 contentDescription = stringResource(id = R.string.scroll_to_top)
             )
         }
